@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author saiwadeg
+ *
+ */
+module CoreJavaWorks {
+}
