@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd"-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+<context:annotation-config></context:annotation-config>
+	<context:component-scan base-package="training.sapient.dependencyInj"></context:component-scan>
+
+
+
+<bean id="hello" class="training.sapient.spring01.HelloService">
+	<property name="name" value="Sai"></property>
+	<property name="city" value="Banglore"></property>
+</bean>
+
+
+
+<!-- bean id="employee" class="training.sapient.property.Employee">
+	<property name="empId" value="101"></property>
+	<property name="empName" value="Sai"></property>
+	<property name="empSalary" value="100000"></property>
+</bean-->
+
+<!-- propertyplaceholer -->
+<!-- using static data from a property file -->
+<bean class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
+	<property name="Location">
+		<value>employee.properties</value>
+	</property>
+</bean>
+
+<bean id="employee" class="training.sapient.property.Employee">
+	<property name="empId" value="${employee.empId}"></property>
+	<property name="empName" value="${employee.empName}"></property>
+	<property name="empSalary" value="${employee.empSalary}"></property>
+</bean>
+
+
+<!-- bean id="mobile" class="training.sapient.dependencyInj.Mobile" autowire="byName">
+	<property name="camera" ref="camera"></property>
+	<property name="speaker" ref="speaker"></property>
+	<property name="screen" ref="screen"></property>
+</bean-->
+
+ 
+ 
+<bean id="mobile" class="training.sapient.dependencyInj.Mobile" autowire="byName">
+	
+</bean>
+
+
+</beans>

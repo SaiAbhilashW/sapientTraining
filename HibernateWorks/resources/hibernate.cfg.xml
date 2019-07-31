@@ -17,5 +17,9 @@
 	<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property> 
 	
 	<mapping class="training.sapient.beans.Person"/> 
+	<mapping class="training.sapient.inheritanceHibernate.Product"/> 
+	<mapping class="training.sapient.inheritanceHibernate.Television"/> 
+	<mapping class="training.sapient.inheritanceHibernate.CellPhone"/> 
+	
 </session-factory>
 </hibernate-configuration>

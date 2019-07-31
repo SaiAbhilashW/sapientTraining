@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	
+	<!--don't want logging then comment it  -->
+	<bean class="training.sapient.aop.model.LoggingAspect"/>
+	<bean class="training.sapient.aop.model.LoggingAspectAfter"/>
+	
+	<bean id="account1" class="training.sapient.aop.model.Account">
+		<property name="accNo" value="101"></property>
+		<property name="accName" value="Kumar"></property>
+		<property name="balance" value="1000"></property>
+	</bean>
+
+	<bean id="account2" class="training.sapient.aop.model.Account">
+		<property name="accNo" value="102"></property>
+		<property name="accName" value="sai"></property>
+		<property name="balance" value="200"></property>
+	</bean>
+	
+	
+	<bean id="sbAcc" class="training.sapient.aop.model.SBAccount">
+	<property name="account" ref="account1"></property>
+	</bean>
+	
+	
+	<bean id="gAcc" class="training.sapient.aop.model.GAccount">
+	<property name="account" ref="account2"></property>
+	</bean>
+	
+	<bean id="banking" class="training.sapient.aop.model.BankService" autowire="byName"></bean>
+
+</beans>
