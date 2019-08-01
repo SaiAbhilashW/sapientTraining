@@ -1,4 +1,0 @@
-id 34 name rev salary 90.0
-id 55 name sai salary 95.0
-id 55 name jij salary 23.0
-id 1 name salah salary 70000.0
