@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Customer created successfully</h2>
+	<hr>
+	<p>Customer Name : ${customer.name }</p>
+	<p>Customer Email : ${customer.email }</p>
+	<p>Customer Age : ${customer.age }</p>
+	<p>Customer Gender ${customer.gender }</p>
+	<p>Customer Date : ${customer.birthday }</p>
+</body>
+</html>
