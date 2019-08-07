@@ -1,0 +1,30 @@
+.headerClass{
+    color:blueviolet; font-family: serif;
+}
+
+p,h2{
+    color: chocolate;
+     font-family: monospace;
+     font-size: 20px;
+}
+
+#classId{
+    color:brown;
+    border: 2px solid #4916AD;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+a:hover{
+    font-family: sans-serif;
+    font-size: 100px;
+    
+}
+
+a:link{
+    color: black;
+}
+
+a:visited{
+    color: red;
+}
