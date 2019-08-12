@@ -1,0 +1,31 @@
+
+<html lang="en">
+<head>
+    <script>
+        function fnTest(){
+            try{
+                allert("Something wrong");
+            }
+            catch(err){
+                console.log("Function is wrong : " + err);
+            }
+            
+        }
+
+        function fnTestThrow(age){
+            try{
+                if(parseInt(age) < 20){
+                    throw "young";
+                 } else throw "old";
+            } catch(err){
+                if(err="young") console.log("Too young");
+                else if(err="old") console.log("Too old");
+            }            
+        }
+    </script>
+</head>
+<body>
+    <button onclick="fnTest()">Click me to make errors</button>
+    <button onclick="fnTestThrow(45)">Click me to make errors</button>
+</body>
+</html>

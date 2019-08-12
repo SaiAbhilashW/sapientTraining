@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+    
+        function fnArrayOpr(){
+            arr = new Array(3);
+            arr[0] = 10;
+            arr[1] = 20;
+            arr[2] = 30;
+            arr[3] = 40;
+            arr[4] = 50;
+
+            console.log("No of elements in the array : " + arr.length);
+            for(var temp in arr){
+                console.log(temp);
+            }
+            
+            arr.push(100);
+            for(var temp in arr){
+                console.log(temp);
+            }
+            arr.pop();
+            for(var temp in arr){
+                console.log(temp);
+            }
+
+            arr.splice(1,2); //go to first position delete 2 elements
+            for(var temp in arr){
+                console.log(temp);
+            }
+
+            arr.splice(1,2,1000,2000); //go to first position delete 2 elements then add 1000 2000 3000 from 1st position
+            for(var temp in arr){
+                console.log(temp);
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>fnArrayOpr()</script>
+</body>
+</html>

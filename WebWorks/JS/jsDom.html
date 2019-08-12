@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function getDomElemets(){
+                para = document.getElementsByTagName("p")[0];
+                console.log(para);
+
+                scriptTag    = document.getElementsByTagName("script")[0];
+                console.log(scriptTag)
+            } 
+            
+            function getColor(){
+                var __body = document.body;
+               // console.log("Number of attributes on body is "+ __body.attributes.length);
+
+                // for(attr in __body.attributes){
+                //     console.log(attr);
+                // }
+
+                console.log(__body.getAttribute("bgcolor"))
+            }
+
+            function setBgColor(color){
+                document.body.setAttribute("bgcolor", color);
+            }
+
+            function manipulateDom(){
+                __epara = document.getElementsByName('p')[0];
+
+                _para = document.createElement("b");
+                _myText = document.createTextNode("Hello I'm from JS");
+                _para.appendChild(_myText);
+
+                document.body.insertBefore(_para,__epara);
+            }
+        </script>
+
+    </head>
+    <body bgcolor="silver">
+        <p>My first para</p>
+        <button onclick="getDomElemets()">Click Me</button>
+        <button onclick="getColor()">Show color</button>
+        <button onclick="setBgColor('gold')">Gold</button>
+        <button onclick="setBgColor('bronze')">Bronze</button>
+        <button onclick="setBgColor('silver')">Silver</button>
+        <button onclick="manipulateDom()">Manipulate</button>
+    </body>
+</html>

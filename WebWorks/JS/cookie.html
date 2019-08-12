@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function setCookie(name){
+            var name = document.myForm.uname.value;
+            console.log(name);
+
+            dt = new Date();
+
+            dt.setDate(dt.getDate() + 1);
+
+            document.cookie="uname="+escape(name)+";expires="+dt;
+            console.log("Cookie Set");
+        }
+
+        function checkCookie(){
+            cookieValue = getCookie('uname');
+
+            if(cookieValue!=null || cookieValue!="") return cookieValue;
+            else return "No cookie found";
+        }
+
+        function getCookie(name){
+            if(document.cookie.length>0){
+                __nameIndex = document.cookie.indexOf(name);
+                __endIndex = name.length+1;
+                __semicolonPosition = document.cookie.indexOf(";",__endIndex);
+                console.log(__semicolonPosition);
+            } else {console.log("not set");}
+        }
+    </script>
+</head>
+<body>
+    <form name="myForm">
+       <input type="text" name="uname" />
+       <input type="button" value="Click" onclick="setCookie()"> 
+       <input type="button" value="getCookie" onclick="checkCookie()">        
+    </form>
+    
+</body>
+</html>

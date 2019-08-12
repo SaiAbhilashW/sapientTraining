@@ -1,0 +1,22 @@
+
+<html lang="en">
+<head>
+    <script>
+        function ask(){
+            var arr = new Array("images/anfield.jpg","images/klopp.jpg","images/team.jpg","images/vvd.jpg");
+            var choice = prompt("Enter 1. Anfield   2. Klopp     3. Team      4.VVD");
+
+            if(choice.match(/[1-4]/)!=choice) alert("Sorry invalid choice");
+            else changeImage(arr[parseInt(choice) - 1]);
+        }    
+
+        function changeImage(image){
+            parent.content.location.href = image;
+        }
+    </script>
+
+</head>
+<body onload="ask()">
+    <button onclick="ask()">Change Image</button>
+</body>
+</html>

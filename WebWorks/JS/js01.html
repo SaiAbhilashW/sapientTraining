@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./scripts/script01.js"></script>
+    <script>
+        //object based properties of JS
+        //public fn
+        function Employee(empId, empName){
+            this.empId = empId;
+            this.empName = empName;
+
+            //priviledge fn
+            this.insideFn = () => {
+                myPrivateFn();
+            }
+
+            //can't be accessed by anyone outside, only by member functions
+            var myPrivateFn = () => {
+                console.log("from inside fn");
+                console.log("EmpId : " +  this.empId + " EmpName : " + this.empName);
+            }
+
+        }
+    
+    </script>
+</head>
+<body>
+   
+    <button onclick="fn();checkVoteCriteria()">Click me</button>
+    <button onclick="fnDead()">Don't click me</button>
+    <button onclick="giveSum()"> Let's play</button>
+    <button onclick="greet(prompt('give me a message'))"> Let's Greet</button>
+    <button onclick="getInfo()">get info</button>
+    <div id="message"></div>
+    <div id="sum"></div>
+    <div id="emp"></div>
+    <noscript>Please enable javascript</noscript>
+    <script>
+        emp = new Employee(101, "Harry");
+        emp.insideFn();
+    </script>
+</body>
+</html>
