@@ -68,6 +68,7 @@
 			<version>2.6.1</version>
 		</dependency>
 	</dependencies>
+	
 
 	<build>
 		<plugins>
@@ -76,6 +77,8 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<!-- Docker stuff -->
+		<finalName>my-first-app</finalName>
 	</build>
 
 	<repositories>

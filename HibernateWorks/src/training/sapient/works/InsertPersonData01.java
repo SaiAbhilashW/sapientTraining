@@ -16,7 +16,7 @@ public class InsertPersonData01 {
 	SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		
 		//create a new session
-		//which reperesents the db conn and which can help do tyhe CRUD operations
+		//which reperesents the db conn and which can help do CRUD operations
 		
 		Session session = sessionFactory.openSession();
 		

@@ -51,7 +51,7 @@ module.exports.updateEmployee = async(emp)=>{
         return emp;    
     } else {
         conn.close();
-        return deleted.deletedCount;
+        throw "record doesn't exist";
     }
     
 }

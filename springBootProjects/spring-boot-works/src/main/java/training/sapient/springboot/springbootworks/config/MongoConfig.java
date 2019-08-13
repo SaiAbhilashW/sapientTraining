@@ -15,7 +15,7 @@ import training.sapient.springboot.springbootworks.beans.User;
 @EnableMongoRepositories(basePackageClasses=training.sapient.springboot.springbootworks.repo.UserRepository.class)
 public class MongoConfig {
 
-	//@Bean
+//@Bean	
 //	public CommandLineRunner commandLineRunner(training.sapient.springboot.springbootworks.repo.UserRepository userRepository) {
 //		return string -> {
 //			userRepository.insert(	new User(101,"Umang",23,"u@gmail.com",new Address("A","B","C","D")));
