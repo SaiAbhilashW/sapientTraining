@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const {addNewEmployee,deleteEmployee,getAllRecords,getEmployeeById} = require('../services/mongo-emps-service');
+const {addNewEmployee,deleteEmployee,getAllRecords,getEmployeeById,updateEmployee} = require('../services/mongo-emps-service');
 
 app.use(bodyParser.json());
 
